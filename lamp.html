@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn On/Off The Lamp</title>
+
+    <style>
+        button{
+            font-family: Arial;
+            font-size: 20px;
+            padding:10px 40px;
+            margin: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        .bt1{
+            background-color: white;
+            color: black;
+        }
+        .bt2{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <br><br>
+   <button class="bt1" href="#" onclick="document.getElementById('lamp').src ='images/lamba_acik.jpg' ">Turn on</button>
+   <button class="bt2" href="#" onclick="document.getElementById('lamp').src ='images/lamba_kapali.jpg' ">Turn off</button>
+   <br><br><br>
+   <img id="lamp" src="images/lamba_kapali.jpg">
+    </center>
+</body>
+</html>
