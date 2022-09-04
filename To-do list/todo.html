@@ -12,7 +12,7 @@
     // If Localstorage has a todos array use it,otherwise use default array
     let todos;
     const savedTodos = JSON.parse(localStorage.getItem('todos'));
-    if(Array.isArray(savedTodos)){
+    if(Array.isArray(savedTodos) && (savedTodos.length>0)){
         todos = savedTodos;
     }else{
         todos = [{
