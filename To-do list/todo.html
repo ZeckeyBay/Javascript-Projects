@@ -3,6 +3,7 @@
 <head>
     <title>To-Do List</title>
 </head>
+<body>
     <input id="todo-title" type="text"/>
     <input id="date-picker" type="date"/>
     <button onclick="addTodo()"> Add Todo </button>
@@ -57,10 +58,9 @@
     saveTodos();
     }
     
-    function saveTodos(){
-        localStorage.setItem('todos',JSON.stringify(todos));
+    const saveTodos = () => {
+        localStorage.setItem('todos', JSON.stringify(todos));
     }
-
     //Controller
     function addTodo(){
         const textbox = document.getElementById('todo-title');
@@ -95,6 +95,7 @@
 
     const deleteButton = document.createElement('button');
     deleteButton.innerText = 'Delete';
+    deleteButton.style = 'margin-left: 12px';
     deleteButton.onclick = deleteTodo;
     deleteButton.id = todo.id;
     element.appendChild(deleteButton);
@@ -103,7 +104,7 @@
     todoList.appendChild(element);
     })
     }
-    
+    render();
 
 </script>
 </body>
