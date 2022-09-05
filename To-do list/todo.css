@@ -1,0 +1,26 @@
+input{
+    background-color: rgb(175, 175, 175);
+    font-size: 20px;
+    
+}
+
+button{
+    font-size: 20px;
+    margin: 7px;
+    background-color: rgb(223, 102, 102);
+}
+
+
+#addtodobutton{
+    background-color: rgb(192, 250, 145);
+}
+
+body{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-image: url("todobi.webp");
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 300px;
+}
