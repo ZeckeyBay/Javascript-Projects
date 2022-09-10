@@ -19,7 +19,7 @@ let interval
 document.addEventListener("visibilitychange",() =>{
     if (document.visibilityState==="hidden"){
         const leaveDate = new Date()
-        setInterval(() => {
+        interval = setInterval(() => {
             notification = new Notification("Geri gel lütfen",{
                 body:`${Math.round((new Date() - leaveDate) / 1000)} saniyedir yoksun`,
                 tag:"Geri gel",
@@ -30,6 +30,7 @@ document.addEventListener("visibilitychange",() =>{
             tag:"Geri gel",
         })
     } else {
-        notification.close()
+        if (interval) clearInterval(interval)
+        if (notification) notification.close()
     }
 })
