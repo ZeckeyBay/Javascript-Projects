@@ -41,3 +41,12 @@ function digitize(n) {
   return String(n).split('').map(Number).reverse()
 }
 console.log(digitize(54321))
+
+
+
+//exercise 4 Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+const binaryArrayToNumber = arr => {
+  return parseInt(arr.join(""), 2)
+};
+console.log(binaryArrayToNumber([0, 0, 0, 1]));
