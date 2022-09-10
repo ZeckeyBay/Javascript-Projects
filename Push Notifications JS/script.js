@@ -3,8 +3,8 @@ const button = document.querySelector("button")
 button.addEventListener("click",() => {
     Notification.requestPermission().then(perm => {
         if (perm == "granted"){
-            const notification = new Notification("Örnek Bildirim",{
-                body:"Daha fazla yazı",
+            const notification = new Notification("Ders Çalış",{
+                body:"Erdem dersini çalış, oyunu bırak",
                 data: {hello: "world"},
                 tag : "Welcome message",
             })
@@ -20,14 +20,14 @@ document.addEventListener("visibilitychange",() =>{
     if (document.visibilityState==="hidden"){
         const leaveDate = new Date()
         interval = setInterval(() => {
-            notification = new Notification("Geri gel lütfen",{
-                body:`${Math.round((new Date() - leaveDate) / 1000)} saniyedir yoksun`,
-                tag:"Geri gel",
+            notification = new Notification("Dersini çalışmadan gelme lütfen",{
+                body:`${Math.round((new Date() - leaveDate) / 1000)} saniyedir çalışıyosun`,
+                tag:"Dersini çalış",
             })
         },100)
-        notification = new Notification("Geri gel lütfen",{
+        notification = new Notification("Dersini çalışmadan gelme lütfen",{
             body:"Lütfeenn",
-            tag:"Geri gel",
+            tag:"Dersini çalış",
         })
     } else {
         if (interval) clearInterval(interval)
