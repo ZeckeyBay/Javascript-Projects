@@ -13,6 +13,6 @@ btn.addEventListener("click", function () {
   document.body.style.backgroundColor = hexColor;
 });
 
-function getRandomNumber() {
+getRandomNumber = () => {
   return Math.floor(Math.random() * hex.length);
 }
