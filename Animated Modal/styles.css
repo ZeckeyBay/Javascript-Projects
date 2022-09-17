@@ -5,14 +5,14 @@
     font-family: 'Lato', sans-serif;
 }
    body {
-      background-color: black;
+      background-color: rgb(90, 70, 70);
       
       
    }
    #open-btn {
     position: absolute;
-    top: 70%;
-    left: 10%;
+    top: 20%;
+    left: 40.5%;
     width: 350px;
     height: 80px;
     font-size: 2rem;
@@ -26,10 +26,10 @@
    }
    #open-btn:hover {
     background-color: #fff;
-    color: #000;
+    color: rgb(90, 70, 70);
    }
    #modal {
-    background-color: #fff;
+    background-color: aquamarine;
     position: absolute;
     top: 50%;
     left: 50%;
