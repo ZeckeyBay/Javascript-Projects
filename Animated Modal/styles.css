@@ -28,13 +28,13 @@
     background-color: #fff;
     color: rgb(90, 70, 70);
    }
-   #modal {
+   #modal-1 {
     background-color: aquamarine;
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
+    width: 250px;
     height: 100px;
     padding: 10px 20px;
     border-radius: 5px;
@@ -42,17 +42,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation-name: animatemodal;
+    animation-name: animatemodal1;
     animation-duration: .4s;
    }
-   #close-btn {
-    font-size: 3rem;
+   #modal-2 {
+    background-color: orange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 100px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: animatemodal2;
+    animation-duration: .4s;
    }
-   #close-btn {
+
+   #close-btn1 {
     cursor: pointer;
     font-size: 3rem;
     color: #ff0000;
    }
+   #close-btn2 {
+    cursor: pointer;
+    font-size: 3rem;
+    color: #ff0000;
+   }
+
    #modal-container {
     display: none;
     position: fixed;
@@ -66,13 +87,23 @@
 
    /* Modal Animation Section */
 
-   @keyframes animatemodal {
+   @keyframes animatemodal1 {
       from {
-        top: -300px;
+        left: -300px;
         opacity: 0;
       }
       to {
-        top: 50%;
+        left: 50%;
         opacity: 1;
       }
    } 
+   @keyframes animatemodal2 {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+    to {
+      top: 50%;
+      opacity: 1;
+    }
+ } 

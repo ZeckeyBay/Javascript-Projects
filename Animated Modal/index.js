@@ -2,7 +2,10 @@
 
 let openBtn = document.getElementById('open-btn');
 let modalContainer = document.getElementById('modal-container');
-let closeBtn = document.getElementById('close-btn');
+let closeBtn1 = document.getElementById('close-btn1');
+let closeBtn2 = document.getElementById('close-btn2');
+let Modal1 = document.getElementById('modal-1')
+let Modal2 = document.getElementById('modal-2')
 
 // Event Listeners 
 
@@ -11,14 +14,22 @@ openBtn.addEventListener('click', function(){
     modalContainer.style.display = 'block';
 });
 
-closeBtn.addEventListener('click', function() {
+closeBtn1.addEventListener('click', function() {
 
-    modalContainer.style.display = 'none';
+        Modal1.style.display = 'none';
 });
+
+closeBtn2.addEventListener('click', function() {
+
+        Modal2.style.display = 'none';
+    
+});
+
 
 window.addEventListener('click', function(e) {
 
     if (e.target === modalContainer) {
         modalContainer.style.display = 'none';
     }
-});
+}); 
+
