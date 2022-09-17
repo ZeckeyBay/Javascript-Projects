@@ -16,12 +16,12 @@ openBtn.addEventListener('click', function(){
 
 closeBtn1.addEventListener('click', function() {
 
-        Modal1.style.display = 'none';
+    modalContainer.style.display = 'none';
 });
 
 closeBtn2.addEventListener('click', function() {
 
-        Modal2.style.display = 'none';
+    modalContainer.style.display = 'none';
     
 });
 
