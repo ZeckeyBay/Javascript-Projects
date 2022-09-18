@@ -17,12 +17,12 @@ openBtn.addEventListener('click', function(){
 
 closeBtn1.addEventListener('click', function() {
 
-    modalContainer.style.display = 'none';
+    Modal1.style.display = 'none';
 });
 
 closeBtn2.addEventListener('click', function() {
 
-    modalContainer.style.display = 'none';
+    Modal2.style.display = 'none';
     
 });
 
