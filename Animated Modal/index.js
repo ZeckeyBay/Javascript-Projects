@@ -11,8 +11,8 @@ let Modal2 = document.getElementById('modal-2')
 
 openBtn.addEventListener('click', function(){
 
-        modalContainer.style.display = 'block'
-
+        modalContainer.style.display = 'inline'
+        
 });
 
 closeBtn1.addEventListener('click', function() {
