@@ -1,4 +1,4 @@
-//exercise 1 : 
+//exercise 1 : random arrow functions
 let summ = (a,b) => a + b
 
 let isPositive = number => number >= 0
@@ -7,7 +7,7 @@ let randomNumber = () => Math.random
 
 document.addEventListener("click", () => console.log("click"))
 
-//exercise 2 :
+//exercise 2 : event listener ex
 
 const grandparent = document.querySelector(".grandparent")
 const parent = document.querySelector(".parent")
