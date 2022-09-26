@@ -47,9 +47,20 @@ const femalechars = characters.filter((character) => {
 })
 console.log(femalechars);
 
+//map
+const names = characters.map(character => {
+    return character.name;
+})
+console.log(names);
 
+const records = characters.map(character => ({
+    name:character.name,
+    height:character.height,
+}));
+console.log(records);
 
-
+const firstNames = characters.map(character => character.name.split(" ")[0]);
+console.log(firstNames);
 
 
 
