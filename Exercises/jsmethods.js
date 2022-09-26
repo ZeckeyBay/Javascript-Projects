@@ -78,6 +78,23 @@ const taller = characters.some(character =>{
 })
 console.log(taller);
 
+//sort
+const byMass = characters.sort((a,b) => {
+    return a.mass - b.mass;
+})
+console.log(byMass);
+
+const byHeight = characters.sort((a,b) => {
+    return a.height - b.height;
+})
+console.log(byHeight);
+
+const byName = characters.sort((a,b) => {
+    if (a.name < b.name) return -1;
+    return 1;
+})
+console.log(byName);
+
 
 
 
