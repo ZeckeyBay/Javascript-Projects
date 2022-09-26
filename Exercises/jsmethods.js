@@ -117,10 +117,16 @@ const totalNameChars = characters.reduce((acc,cur) => {
 console.log(totalNameChars);
 
 
+//every
+const allBlueEyes = characters.every(character => {
+    return character.eye_color === "blue";
+})
+console.log(allBlueEyes);
 
-
-
-
+const everyShorter = characters.every(character => {
+    return character.height < 250;
+})
+console.log(everyShorter);
 
 
 
