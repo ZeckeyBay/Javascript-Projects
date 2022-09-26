@@ -3,7 +3,7 @@ const characters = [
         name : 'Luke Skywalker',
         height : 172,
         mass : 77,
-        eye_color : 'blue',
+        eye_color : "blue",
         gender : 'male',
     },
     {
@@ -95,9 +95,26 @@ const byName = characters.sort((a,b) => {
 })
 console.log(byName);
 
+//reduce
+const allMass = characters.reduce((acc,cur) => {
+    return acc + cur.mass;
+},0)
+console.log(allMass);
 
+const charbyEyeColor = characters.reduce((acc,cur) => {
+    if(acc[cur.eye_color]) {
+        acc[cur.eye_color]++;
+    } else {
+        acc[cur.eye_color] = 1;
+    }
+    return acc;
+}, {})
+console.log(charbyEyeColor);
 
-
+const totalNameChars = characters.reduce((acc,cur) => {
+    return acc + cur.name.length
+},0);
+console.log(totalNameChars);
 
 
 
