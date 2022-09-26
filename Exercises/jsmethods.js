@@ -62,9 +62,21 @@ console.log(records);
 const firstNames = characters.map(character => character.name.split(" ")[0]);
 console.log(firstNames);
 
+//some
+const oneMaleCharacter = characters.some(character => {
+    return character.gender === "male";
+})
+console.log(oneMaleCharacter);
 
+const eyes = characters.some(character =>{
+    return character.eye_color === "blue";
+})
+console.log(eyes);
 
-
+const taller = characters.some(character =>{
+    return character.height > 250;
+})
+console.log(taller);
 
 
 
