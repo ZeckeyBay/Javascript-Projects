@@ -7,6 +7,7 @@
     <title>Box Game</title>
 
     <style>
+        
         .tile {
             width: 100px;
             height: 100px;
@@ -20,12 +21,14 @@
         .tile.selected{
             background-color: green;
         }
+
+        
     </style>
 </head>
 <body>
-    <!-- <button class="box3">3x3</button>
-    <button class="box4">4x4</button>
-    <button class="box5">5x5</button> -->
+    <button class="box3" onClick="window.location.reload(true)">3x3</button>
+    <button class ="box4" onClick="window.location.reload(true)">4x4</button>
+    <button class="box5" onClick="window.location.reload(true)">5x5</button>
 
     <section></section>
 
@@ -35,13 +38,15 @@
         let gridSize = 3;
         const numberOfTiles = gridSize ** 2;
         const clickedTiles = [];
-        //const btn1 = document.getElementsByClassName("box3")
-        //const btn2 = document.getElementsByClassName("box4")
-        //const btn3 = document.getElementsByClassName("box5")
+        const btn1 = document.getElementsByClassName("box3")
+        const btn2 = document.getElementsByClassName("box4")
+        const btn3 = document.getElementsByClassName("box5")
 
-        
 
-        for (let row=0; row<gridSize; row++){
+
+
+        function setupGrid(gridSize) {
+            for (let row=0; row<gridSize; row++){
             const wrapper = document.createElement("div");
             wrapper.classList.add("wrapper");
             for (let col=0; col<gridSize; col++){
@@ -51,8 +56,11 @@
             }
             section.appendChild(wrapper);
         }
+        }
+        
 
-        document.addEventListener("click", function(){
+        function setupClickListeners(){
+            document.addEventListener("click", function(){
             event.target.classList.add("selected")
             if (!event.target.classList.contains("tile")) return;
             if (clickedTiles.includes(event.target)) return;
@@ -67,8 +75,13 @@
                     }
                 }, 300)
             }
-
         })
+        }
+
+
+
+        setupGrid(gridSize);
+        setupClickListeners();
 
     </script>
 </body>
