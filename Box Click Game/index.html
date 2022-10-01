@@ -42,8 +42,18 @@
         </div>
     </section>
     <script>
+        const clickedTiles = [];
+
         document.addEventListener("click", function(){
             event.target.classList.add("selected")
+            if (!event.target.classList.contains("tile")) return;
+            if (clickedTiles.includes(event.target)) return;
+            clickedTiles.push(event.target);
+
+            if (clickedTiles.length >= 9){
+                
+            }
+
         })
 
     </script>
