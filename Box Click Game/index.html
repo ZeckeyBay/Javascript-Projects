@@ -7,15 +7,57 @@
     <title>Box Game</title>
 
     <style>
-        
+        *{   
+          
+            align-items: center;
+            justify-content: center;
+        }
+        .buttons{
+            display: flex;
+            padding: 50px;  
+            
+        }
+        .box3{
+            font-size: 30px;
+            border-radius: 15px;
+            color: red;
+        }
+        .box3:hover{
+            color: white;
+            background-color: red;
+        }
+        .box4{
+            margin-right: 20px;
+            margin-left: 20px;
+            font-size: 30px;
+            border-radius: 15px;
+            color: red;
+        }
+        .box4:hover{
+            color: white;
+            background-color: red;
+        }
+        .box5{
+            font-size: 30px;
+            border-radius: 15px;
+            color: red;
+        }
+        .box5:hover{
+            color: white;
+            background-color: red;
+        }
         .tile {
             width: 100px;
             height: 100px;
             border: 1px solid black;
+            align-items: center;
+            justify-content: center;
+            
         }
         .wrapper{
             display: flex;
             flex-direction: row;
+           
         }
 
         .tile.selected{
@@ -26,9 +68,12 @@
     </style>
 </head>
 <body>
+    <div class="buttons">
     <button class="box3" onClick="window.location.reload(true)">3x3</button>
     <button class ="box4" onClick="window.location.reload(true)">4x4</button>
     <button class="box5" onClick="window.location.reload(true)">5x5</button>
+    </div>
+    
 
     <section></section>
 
