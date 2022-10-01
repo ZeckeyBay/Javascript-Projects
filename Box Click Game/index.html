@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Box Game</title>
 
     <style>
         .tile {
@@ -23,26 +23,24 @@
     </style>
 </head>
 <body>
-    <section>
-        <div class="wrapper">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
-        
-        <div class="wrapper">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
-        <div class="wrapper">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
-    </section>
+    <section></section>
     <script>
+        
+        const section = document.getElementsByTagName("section")[0];
+        const gridSize = 3;
+        const numberOfTiles = gridSize ** 2;
         const clickedTiles = [];
+
+        for (let row=0; row<gridSize; row++){
+            const wrapper = document.createElement("div");
+            wrapper.classList.add("wrapper");
+            for (let col=0; col<gridSize; col++){
+                const tile = document.createElement("div");
+                tile.classList.add("tile");
+                wrapper.appendChild(tile);
+            }
+            section.appendChild(wrapper);
+        }
 
         document.addEventListener("click", function(){
             event.target.classList.add("selected")
@@ -50,7 +48,7 @@
             if (clickedTiles.includes(event.target)) return;
             clickedTiles.push(event.target);
 
-            if (clickedTiles.length >= 9){
+            if (clickedTiles.length >= numberOfTiles){
                 const interval = setInterval(() => {
                     const tile = clickedTiles.shift();
                     tile.classList.remove("selected");
