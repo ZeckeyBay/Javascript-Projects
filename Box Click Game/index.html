@@ -51,7 +51,13 @@
             clickedTiles.push(event.target);
 
             if (clickedTiles.length >= 9){
-                
+                const interval = setInterval(() => {
+                    const tile = clickedTiles.shift();
+                    tile.classList.remove("selected");
+                    if (clickedTiles.length === 0){
+                        clearInterval(interval);
+                    }
+                }, 300)
             }
 
         })
