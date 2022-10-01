@@ -16,6 +16,10 @@
             display: flex;
             flex-direction: row;
         }
+
+        .tile.selected{
+            background-color: green;
+        }
     </style>
 </head>
 <body>
@@ -37,6 +41,11 @@
             <div class="tile"></div>
         </div>
     </section>
-    
+    <script>
+        document.addEventListener("click", function(){
+            event.target.classList.add("selected")
+        })
+
+    </script>
 </body>
 </html>
