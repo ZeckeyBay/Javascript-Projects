@@ -1,8 +1,11 @@
 
 let cards = [];
+let compcards = [];
 let sum = 0;
+let compsum = 0;
 let hasBlackJack = false
 let isAlive = true
+let stayRound = false
 let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el")
@@ -33,32 +36,60 @@ function getRandomCard() {
 function startGame(){
     let firstCard = getRandomCard();
     let secondCard = getRandomCard();
+    let compfirstCard = getRandomCard();
+    let compSecondCard = getRandomCard();
     cards = [firstCard,secondCard];
     sum = firstCard + secondCard;
+    compcards = [compfirstCard,compSecondCard];
+    compsum = compfirstCard + compSecondCard;
     isAlive = true;
-    renderGame(); 
+    renderGame();
+    comprendergame();
 }
 function renderGame(){
     cardsEl.textContent = "Your Cards: " 
-    
-
     for (let i=0; i<cards.length; i++){
-        cardsEl.textContent += cards[i] + " ";
-        
+        cardsEl.textContent += cards[i] + " ";    
     }
     sumEl.textContent = "Your Sum: " + sum;
-    
+
     if (sum <= 20) {
         message = "Do you want to draw a new card ? "
     } else if (sum === 21) {
         message = "Congrats! You've got Blackjack!"
         hasBlackJack = true;
-    } else {
-        message = "You're out of the game! "
+    } else if (sum > 21 && compsum <= 21) {
+        message = "Computer Won! "
         isAlive = false;
+    } else if (sum > 21 && compsum > 21) {
+        message = "You both lost"
     }
+    
     messageEl.textContent = message;
     console.log(message);
+}
+
+function comprendergame(){
+    compcardsEl.textContent = "Computer's Cards: ";
+    
+    for (let i=0; i<compcards.length; i++){
+        compcardsEl.textContent += compcards[i] + " ";
+    }
+    compsumEl.textContent= "Computer's Sum: " + compsum;
+
+    if (sum<16 ){
+        
+    } else if (sum>=16){
+        isAlive = false;
+    }
+
+}
+
+function compNewCard(){
+    let compcard = getRandomCard();
+    compsum += compcard;
+    compcards.push(compcard);
+    comprendergame();
 }
 
 function newCard(){
@@ -68,5 +99,11 @@ function newCard(){
         cards.push(card);
         renderGame();
     }
-    
+}
+
+function stopRaund(){
+    stayRound = true;
+    if (isAlive === true && hasBlackJack === false){
+        isAlive = false;
+    }
 }
