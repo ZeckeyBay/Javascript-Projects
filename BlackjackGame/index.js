@@ -7,13 +7,16 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el")
+let compsumEl = document.querySelector("#sum-el-comp")
+let compcardsEl = document.getElementById("cards-el-comp")
+
 let player = {
      name : "Player",
      chips : 145
 }
-
 let playerEl = document.getElementById("player-el")
 playerEl.textContent = player.name + ": $" + player.chips;
+
 
 
 function getRandomCard() {
@@ -36,12 +39,15 @@ function startGame(){
     renderGame(); 
 }
 function renderGame(){
-    cardsEl.textContent = "Cards: " 
+    cardsEl.textContent = "Your Cards: " 
+    
 
     for (let i=0; i<cards.length; i++){
         cardsEl.textContent += cards[i] + " ";
+        
     }
-    sumEl.textContent = "Sum: " + sum
+    sumEl.textContent = "Your Sum: " + sum;
+    
     if (sum <= 20) {
         message = "Do you want to draw a new card ? "
     } else if (sum === 21) {

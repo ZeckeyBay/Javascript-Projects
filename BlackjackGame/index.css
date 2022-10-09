@@ -29,7 +29,14 @@ button {
     margin-bottom: 4px;
 }
 
-#new-card {
+#player-stats{
     
+    background-color: red;
+}
+
+#computer-stats{
+    background-color: black;
+}
+#new-card {
     margin: 30px; 
 }
