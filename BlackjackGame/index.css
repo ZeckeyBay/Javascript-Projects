@@ -27,6 +27,7 @@ button {
     border: none;
     border-radius: 2px;
     margin-bottom: 4px;
+    margin: 15px;
 }
 
 #player-stats{
@@ -36,7 +37,4 @@ button {
 
 #computer-stats{
     background-color: black;
-}
-#new-card {
-    margin: 30px; 
 }
