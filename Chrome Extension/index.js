@@ -7,3 +7,7 @@ const ulEl = document.getElementById("el-el");
 inputbtn.addEventListener("click",function(){
     myLeads.push(inputEl.value)
 })
+
+for (let i=0; i<myLeads.length;i++){
+    ulEl.textContent = myLeads[i] + " "
+}
