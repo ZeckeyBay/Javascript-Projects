@@ -1,0 +1,91 @@
+/*Boxes*/
+.boxes{
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.box-blue{
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+    margin-right: 10px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: black;
+}
+.box-red{
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    margin-right: 10px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: black;
+}
+.box-green{
+    width: 60px;
+    height: 60px;
+    background-color: green;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+/*Buttons*/
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+#btn-fadein{
+    margin-right: 10px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: black;
+}
+#btn-fadeout{
+    margin-right: 10px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: black;
+}
+#btn-fadetoggle{
+    border-radius: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+/* Slide */
+.slide{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#slide-down{
+    margin-right: 10px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: black;
+}
+#slide-up{
+    margin-right: 10px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: black;
+}
+#slide-toggle{
+    margin-right: 10px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: black;
+}
+.slide-para{
+    background-color: aqua;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: black;
+}
