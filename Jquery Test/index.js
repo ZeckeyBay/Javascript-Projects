@@ -14,7 +14,7 @@ $(function(){
         $(".box-blue").fadeToggle(2000);
         $(".box-green").fadeToggle(4000);
     })
-})
+});
 
 $(function(){
     $("#slide-down").click(function(){
@@ -26,5 +26,14 @@ $(function(){
     $("#slide-toggle").click(function(){
         $(".slide-para").slideToggle(1500);
     })
-})
+});
 
+
+$(function(){
+    $(".open-popup").click(function(){
+        $(".modal").css("transform","scale(1)");
+    });
+    $(".close-button").click(function(){
+        $(".modal").css("transform","scale(0)");
+    });
+})
