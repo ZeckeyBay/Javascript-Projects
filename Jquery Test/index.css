@@ -96,10 +96,14 @@
 /* Pop-up */
 
 .open-popup{
-    margin-left: 610px;
+    margin-left: 890px;
+    margin-top: 20px;
+    padding: 10px 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    color: white;
 }
 .modal{
     position: fixed;
