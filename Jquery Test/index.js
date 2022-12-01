@@ -31,9 +31,21 @@ $(function(){
 
 $(function(){
     $(".open-popup").click(function(){
+        $(".overlay").css({opacity:"1"});
         $(".modal").css("transform","scale(1)");
+        $(".overlay").css("pointer-events","all");
+        
     });
     $(".close-button").click(function(){
+        $(".overlay").css({opacity:"0"});
         $(".modal").css("transform","scale(0)");
+        $(".overlay").css("pointer-events","none");  
     });
+    
+    $(".overlay").click(function(){
+        $(".overlay").css({opacity:"0"});
+        $(".modal").css("transform","scale(0)");
+        $(".overlay").css("pointer-events","none");
+    });
+    
 })

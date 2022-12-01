@@ -95,6 +95,14 @@
 
 /* Pop-up */
 
+.open-popup{
+    margin-left: 610px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 .modal{
     position: fixed;
     top: 50%;
@@ -130,9 +138,19 @@
 }
 .modal-body{
     padding: 20px 15px;
-    display: inline-block;
 }
-#overlay{
+#password{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+#email{
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.overlay{
     position: fixed;
     opacity: 0;
     transition: 200ms ease-in-out;
@@ -142,8 +160,4 @@
     bottom: 0;
     background-color: rgba(0,0,0,.5);
     pointer-events: none;
-}
-#overlay.active{
-    opacity: 1;
-    pointer-events: all;
 }
