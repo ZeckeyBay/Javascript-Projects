@@ -3,14 +3,14 @@ This repo includes projects I try to build while I am learning JS
 
 ## PROJECT LINKS
 
-# Animated Modal : animated-modal-s.netlify.app
+# Animated Modal : https://animated-modal-s.netlify.app
 # Blackjack Game : https://basicblackjackgame.netlify.app
-# Box Click Game : box-click-game.netlify.app
-# Chrome Extension : chrome-extensionnnn.netlify.app
-# Color Flipper : color-flipperrrr.netlify.app
-# Digital Clock : digital-clockl.netlify.app
-# Jquery Test : email-pass-verifi.netlify.app
-# Quote Generator : quote-generatorrrr.netlify.app
-# Review Project : review-projectt.netlify.app
-# To-do list : to-do-list-basicc.netlify.app
-# Turn on-off Lamp : turn-on-off-lamp.netlify.app
+# Box Click Game : https://box-click-game.netlify.app
+# Chrome Extension : https://chrome-extensionnnn.netlify.app
+# Color Flipper : https://color-flipperrrr.netlify.app
+# Digital Clock : https://digital-clockl.netlify.app
+# Jquery Test : https://email-pass-verifi.netlify.app
+# Quote Generator : https://quote-generatorrrr.netlify.app
+# Review Project : https://review-projectt.netlify.app
+# To-do list : https://to-do-list-basicc.netlify.app
+# Turn on-off Lamp : https://turn-on-off-lamp.netlify.app
