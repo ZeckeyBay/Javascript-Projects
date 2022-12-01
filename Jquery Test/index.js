@@ -48,4 +48,57 @@ $(function(){
         $(".modal").css("transform","scale(0)");
         $(".overlay").css("pointer-events","none");
     });    
+
+    $("#email").keyup(function(){
+        if(validateEmail()){
+            $("#email").css("border","2px solid green");
+            $("#emailMsg").html("<p class='text-success'>Validated</p>");
+        } else {
+            $("#email").css("border","2px solid red");
+            $("#emailMsg").html("<p class='text-danger'>Un-Validated</p>"); 
+        }
+        buttonState();
+    })
+
+    $("#password").keyup(function(){
+        if(validatePassword()){
+            $("#password").css("border","2px solid green");
+            $("#passMsg").html("<p class='text-success'>Password Validated</p>");
+        } else {
+            $("#password").css("border","2px solid red");
+            $("#passMsg").html("<p class='text-danger'>Password not Valid</p>"); 
+        }
+        buttonState();
+    })
+
+    $(".submit-btn").hide();
 })
+
+function validateEmail(){
+    //get value of input mail
+    let email=$("#email").val();
+    //regular expression
+    let reg = /^\w+([-+.']\w+)*@\w+([-.]\+)*\.\w+([-.]\w+)*$/
+    if(reg.test(email)){
+        return true;
+    } else{
+        return false;
+    }
+}
+
+function validatePassword(){
+    let pass=$("#password").val();
+    if(pass.length >7){
+        return true;
+    } else {
+        return false;
+    }
+};
+
+function buttonState(){
+    if(validateEmail() && validatePassword()){
+        $(".submit-btn").show();
+    } else {
+        $(".submit-btn").hide();
+    }
+};

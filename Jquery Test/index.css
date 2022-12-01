@@ -103,7 +103,7 @@
 }
 .modal{
     position: fixed;
-    top: 50%;
+    top: 30%;
     left: 40%;
     transform: translate(-50%,-50%) scale(0);
     transition: 200ms ease-in-out;
@@ -141,10 +141,15 @@
     display: inline-block;
     align-items: center;
     justify-content: center;
+    height: 30px;
+    width: 300px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 #email{
     display: inline-block;
+    height: 30px;
+    width: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -158,4 +163,16 @@
     bottom: 0;
     background-color: rgba(0,0,0,.5);
     pointer-events: none;
+}
+
+#submit-button{
+    display: block;
+    width: 100%;
+    background-color: green;
+    cursor: pointer;
+    padding: 14px 28px;
+    font-size: 16px;
+    color: white;
+
+    text-align: center;
 }
