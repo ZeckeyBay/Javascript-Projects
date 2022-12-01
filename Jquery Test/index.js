@@ -16,6 +16,7 @@ $(function(){
     })
 });
 
+
 $(function(){
     $("#slide-down").click(function(){
         $(".slide-para").slideDown(1500);
@@ -46,6 +47,5 @@ $(function(){
         $(".overlay").css({opacity:"0"});
         $(".modal").css("transform","scale(0)");
         $(".overlay").css("pointer-events","none");
-    });
-    
+    });    
 })
