@@ -3,6 +3,7 @@ This repo includes projects I try to build while I am learning JS
 
 ## PROJECT LINKS
 
+# Multiplication App : https://carpimtablosu.netlify.app/
 # Animated Modal : https://animated-modal-s.netlify.app
 # Blackjack Game : https://basicblackjackgame.netlify.app
 # Box Click Game : https://box-click-game.netlify.app
