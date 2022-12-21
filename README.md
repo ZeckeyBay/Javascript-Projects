@@ -1,4 +1,4 @@
-# Javascript-trials
+# Javascript-Projects
 This repo includes projects I try to build while I am learning JS
 
 ## PROJECT LINKS
