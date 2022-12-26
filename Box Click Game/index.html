@@ -79,6 +79,7 @@
         const btn2 = document.getElementById("box4");
         const btn3 = document.getElementById("box5");
         let gridSize = 3;
+        let numberOfTiles = gridSize ** 2;
         setupGrid(gridSize);
         setupClickListeners();
 
@@ -95,8 +96,8 @@
         }
         }
         function setupClickListeners(){
-            const numberOfTiles = gridSize ** 2;
-            const clickedTiles = [];
+            numberOfTiles = gridSize ** 2;
+            let clickedTiles = [];
             document.addEventListener("click", function(){
             event.target.classList.add("selected")
             if (!event.target.classList.contains("tile")) return;
@@ -104,8 +105,8 @@
             clickedTiles.push(event.target);
 
             if (clickedTiles.length >= numberOfTiles){
-                const interval = setInterval(() => {
-                    const tile = clickedTiles.shift();
+                let interval = setInterval(() => {
+                    let tile = clickedTiles.shift();
                     tile.classList.remove("selected");
                     if (clickedTiles.length === 0){
                         clearInterval(interval);
@@ -117,19 +118,19 @@
 
         btn1.addEventListener("click",function(){
             divv.innerHTML ="";
-            let gridSize = 3;
+            gridSize = 3;
             setupGrid(gridSize);
             setupClickListeners();
          })
         btn2.addEventListener("click",function(){
             divv.innerHTML ="";
-            let gridSize = 4;
+            gridSize = 4;
             setupGrid(gridSize);
             setupClickListeners();
         })
         btn3.addEventListener("click",function(){
             divv.innerHTML ="";
-            let gridSize = 5;
+            gridSize = 5;
             setupGrid(gridSize);
             setupClickListeners();
         })
