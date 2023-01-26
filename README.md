@@ -3,6 +3,7 @@ This repo includes projects I try to build while I am learning JS
 
 ## PROJECT LINKS
 
+# Character-Counter = https://character-counter-box.netlify.app/
 # Multiplication App : https://carpimtablosu.netlify.app/
 # Animated Modal : https://animated-modal-s.netlify.app
 # Blackjack Game : https://basicblackjackgame.netlify.app
