@@ -4,6 +4,7 @@ const imagebtn = document.getElementById("randimages");
 
 /*Images Link
 https://picsum.photos/id/606/200/300
+Some links dont have a image. Could not find a solution for that
 */
 
 //Random image selection
