@@ -12,8 +12,9 @@ function RandomImageSelector(){
     let num = Math.floor(Math.random()*1000 +1);
     images[i].src = "https://picsum.photos/id/" + num + "/200/300";
     images[i].alt = images[i].src;
-  }
+  } 
 }
+
 const prevEl = document.getElementById("prev");
 const nextEl = document.getElementById("next");
 let x = 0;
