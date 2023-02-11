@@ -16,21 +16,21 @@ let shopItemsData = [{
     img : "images/img-2.jpg"
 },
 {
-    id : "bbbb",
+    id : "cccc",
     name : "Suit",
     price : "500",
     desc : "random",
     img : "images/img-3.jpg"
 },
 {
-    id : "bbbb",
+    id : "dddd",
     name : "Trousers",
     price : "200",
     desc : "random",
     img : "images/img-4.jpg"
 }]
 
-let basket = [{}];
+let basket = [];
 
 let generateShop = ()=>{
     return (shop.innerHTML= shopItemsData.map((item)=>{
@@ -57,22 +57,38 @@ generateShop();
 
 let increment = (id)=>{
     let selectedItem = id;
-    let search = basket.find((item)=> x.id === selectedItem.id);
+    let search = basket.find((item)=> item.id === selectedItem.id);
 
     if(search === undefined){
         basket.push({
             id : selectedItem.id,
-            item : 1
-        })
+            item : 1,
+        });
     } else {
-        search.item += 1
+        search.item += 1;
     }  
+    update(selectedItem.id);
 }
 
 let decrement = (id)=>{
-    console.log(id)
+    let selectedItem = id;
+    let search = basket.find((item)=> item.id === selectedItem.id);
+
+    if(search.item === 0) return;
+     else {
+        search.item -= 1;
+    }
+    localStorage.setItem("data");
+    update(selectedItem.id);
 }
 
 let update = (id)=>{
-    console.log(id)
+    let search = basket.find((item)=> item.id === id);
+    document.getElementById(id).innerHTML = search.item;
+    calculation();
+}
+
+let calculation = ()=>{
+    let cartIcon = document.getElementById("cartAmount");
+    cartIcon.innerHTML = basket.map((x)=> x.item).reduce((x,y)=> x+y,0)
 }
