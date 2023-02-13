@@ -3,20 +3,20 @@ let shop = document.getElementById('shop');
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateShop = ()=>{
-    return (shop.innerHTML= shopItemsData.map((item)=>{
-        let search = basket.find((x)=>x.id === item.id) || [];
+    return (shop.innerHTML= shopItemsData.map((y)=>{
+        let search = basket.find((x)=>x.id === y.id) || [];
         return `
-        <div id=product-id-${item.id} class="item">
-                <img width="220" height="220" src="${item.img}">
+        <div id=product-id-${y.id} class="item">
+                <img width="220" height="220" src="${y.img}">
                 <div class="details">
-                    <h3>${item.name}</h3>
-                    <p>${item.desc}</p>
+                    <h3>${y.name}</h3>
+                    <p>${y.desc}</p>
                     <div class="price-quantity">
-                        <h2>$ ${item.price}</h2>
+                        <h2>$ ${y.price}</h2>
                         <div class="buttons">
-                            <i onclick="decrement(${item.id})" class="bi bi-dash"></i>
-                            <div id=${item.id} class="quantity">${search.item === undefined? 0: search.item}</div>
-                            <i onclick="increment(${item.id})" class="bi bi-plus-lg"></i>
+                            <i onclick="decrement(${y.id})" class="bi bi-dash"></i>
+                            <div id=${y.id} class="quantity">${search.item === undefined? 0: search.item}</div>
+                            <i onclick="increment(${y.id})" class="bi bi-plus-lg"></i>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@ generateShop();
 
 let increment = (id)=>{
     let selectedItem = id;
-    let search = basket.find((item)=> item.id === selectedItem.id);
+    let search = basket.find((x)=> x.id === selectedItem.id);
 
     if(search === undefined){
         basket.push({
@@ -44,7 +44,7 @@ let increment = (id)=>{
 
 let decrement = (id)=>{
     let selectedItem = id;
-    let search = basket.find((item)=> item.id === selectedItem.id);
+    let search = basket.find((x)=> x.id === selectedItem.id);
 
     if(search === undefined) return;
     else if(search.item === 0) return;
@@ -57,7 +57,7 @@ let decrement = (id)=>{
 }
 
 let update = (id)=>{
-    let search = basket.find((item)=> item.id === id);
+    let search = basket.find((x)=> x.id === id);
     document.getElementById(id).innerHTML = search.item;
     calculation();
 }
