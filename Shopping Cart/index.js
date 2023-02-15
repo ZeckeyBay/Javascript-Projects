@@ -26,6 +26,26 @@ let generateShop = ()=>{
 
 generateShop();
 
+let searchBar = ()=>{
+    const searchBox = document.getElementById("search-bar").value.toUpperCase();
+    const storeItems = document.getElementById("shop");
+    const product = document.querySelectorAll(".item");
+    const productName = storeItems.getElementsByTagName("h3");
+
+    for(let i=0; i<productName.length;i++){
+        let match = product[i].getElementsByTagName("h3")[0];
+        if(match){
+            let textValue = match.textContent || match.innerHTML
+
+            if(textValue.toUpperCase().indexOf(searchBox) > -1){
+                product[i].style.display = "";
+            } else{
+                product[i].style.display = "none";
+            }
+        }
+    }
+}
+
 let increment = (id)=>{
     let selectedItem = id;
     let search = basket.find((x)=> x.id === selectedItem.id);

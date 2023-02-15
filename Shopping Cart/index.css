@@ -27,6 +27,36 @@ a{
     margin-bottom: 30px;
 }
 
+.search-bar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: -42%;
+    margin-bottom: 30px;
+    border: solid black 2px;
+    border-radius: 4px;
+    width: 320px;
+}
+
+.bi-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 1000;
+    font-size: 17px;
+    padding-right: 10px;
+}
+
+.search-bar{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 3px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
 .cart{
     position: relative;
     background-color: #fff;
