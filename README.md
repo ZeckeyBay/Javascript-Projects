@@ -1,8 +1,6 @@
 # Javascript-Projects
 This repo includes projects I try to build while I am learning JS
 
-Back to learning 21.08.23
-
 ## PROJECT LINKS
 
 ## Rotated Image Gallery = https://rotating-imagexgallery.netlify.app/
